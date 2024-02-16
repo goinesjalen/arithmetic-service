@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: run the unit tests
+      - name: npm install
+        run: npm install
+      - name: run the unit test
         run: npm test
       - name: Build and push the image
         run: |
